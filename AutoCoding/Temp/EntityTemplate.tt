@@ -1,0 +1,59 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="AutoCoding" #>
+<#@ parameter type="AutoCoding.Model.TableModel" name="entity" #>
+/*******************************************************************************
+ * Copyright (C) Git Corporation. All rights reserved.
+ *
+ * Author: 代码工具自动生成
+ * Create Date: <#=DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") #>
+ * Blog: http://www.cnblogs.com/qingyuan/ 
+ * Description: Git.Framework
+ * 
+ * Revision History:
+ * Date         Author               Description
+ * <#=DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") #>         PlaiuZt               	
+*********************************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using Git.Framework.ORM;
+
+namespace Git.Storage.Entity.<#=entity.ModuleName #>
+{
+	[TableAttribute(DbName = "<#=entity.DbName #>", Name = "<#=entity.TableName #>", PrimaryKeyName = "<#=entity.TableKey #>", IsInternal = false)]
+	public partial class <#=entity.TableName #>Entity : BaseEntity
+	{
+		public <#=entity.TableName #>Entity
+		{
+
+		}
+		
+		<#for (int i =0; i < entity.Columns.Count ; i++)
+		{
+		#>
+[DataMapping(ColumnName = "<#=entity.Columns[i].ColumnName #>", DbType = <#=entity.Columns[i].ColumnType #>, Length = <#=entity.Columns[i].CharLength #>, CanNull = <#=entity.Columns[i].IsNullable #>, DefaultValue = <#=entity.Columns[i].DefaultValue #>, PrimaryKey = <#=entity.Columns[i].IsPrimaryKey #>, AutoIncrement = true, IsMap = true)]
+        public Int32 <#=entity.Columns[i].ColumnName #> { get; set; }
+
+        public <#=entity.TableName #>Entity Include<#=entity.Columns[i].ColumnName #>(bool flag)
+        {
+            if (flag && !this.ColumnList.Contains("<#=entity.Columns[i].ColumnName #>"))
+            {
+                this.ColumnList.Add("<#=entity.Columns[i].ColumnName #>");
+            }
+            return this;
+        }
+		<#}#>
+    }
+
+	public partial class <#=entity.TableName #>Entity
+	{
+		/*******************************************************************************
+		 * 用户自定义属性
+		*********************************************************************************/
+		
+	}
+}
