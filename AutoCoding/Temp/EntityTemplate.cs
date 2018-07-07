@@ -15,7 +15,7 @@ namespace AutoCoding.Temp
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+    #line 1 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
     public partial class EntityTemplate : EntityTemplateBase
     {
@@ -29,7 +29,7 @@ namespace AutoCoding.Temp
                     "\n * Copyright (C) Git Corporation. All rights reserved.\r\n *\r\n * Author: 代码工具自动生成" +
                     "\r\n * Create Date: ");
             
-            #line 9 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 9 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")));
             
             #line default
@@ -37,7 +37,7 @@ namespace AutoCoding.Temp
             this.Write("\r\n * Blog: http://www.cnblogs.com/qingyuan/ \r\n * Description: Git.Framework\r\n * \r" +
                     "\n * Revision History:\r\n * Date         Author               Description\r\n * ");
             
-            #line 15 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 15 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")));
             
             #line default
@@ -54,49 +54,49 @@ using Git.Framework.ORM;
 
 namespace Git.Storage.Entity.");
             
-            #line 25 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 25 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.ModuleName));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n\t[TableAttribute(DbName = \"");
             
-            #line 27 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 27 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.DbName));
             
             #line default
             #line hidden
             this.Write("\", Name = \"");
             
-            #line 27 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 27 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.TableName));
             
             #line default
             #line hidden
             this.Write("\", PrimaryKeyName = \"");
             
-            #line 27 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 27 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.TableKey));
             
             #line default
             #line hidden
             this.Write("\", IsInternal = false)]\r\n\tpublic partial class ");
             
-            #line 28 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 28 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.TableName));
             
             #line default
             #line hidden
             this.Write("Entity : BaseEntity\r\n\t{\r\n\t\tpublic ");
             
-            #line 30 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 30 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.TableName));
             
             #line default
             #line hidden
             this.Write("Entity\r\n\t\t{\r\n\r\n\t\t}\r\n\t\t\r\n\t\t");
             
-            #line 35 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 35 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
 for (int i =0; i < entity.Columns.Count ; i++)
 		{
 		
@@ -105,91 +105,98 @@ for (int i =0; i < entity.Columns.Count ; i++)
             #line hidden
             this.Write("[DataMapping(ColumnName = \"");
             
-            #line 38 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 38 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].ColumnName));
             
             #line default
             #line hidden
             this.Write("\", DbType = ");
             
-            #line 38 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 38 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].ColumnType));
             
             #line default
             #line hidden
             this.Write(", Length = ");
             
-            #line 38 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 38 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].CharLength));
             
             #line default
             #line hidden
             this.Write(", CanNull = ");
             
-            #line 38 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 38 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].IsNullable));
             
             #line default
             #line hidden
             this.Write(", DefaultValue = ");
             
-            #line 38 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 38 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].DefaultValue));
             
             #line default
             #line hidden
             this.Write(", PrimaryKey = ");
             
-            #line 38 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 38 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].IsPrimaryKey));
             
             #line default
             #line hidden
-            this.Write(", AutoIncrement = true, IsMap = true)]\r\n        public Int32 ");
+            this.Write(", AutoIncrement = ");
             
-            #line 39 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 38 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].IsIdentity));
+            
+            #line default
+            #line hidden
+            this.Write(", IsMap = true)]\r\n        public Int32 ");
+            
+            #line 39 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].ColumnName));
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n\r\n        public ");
             
-            #line 41 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 41 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.TableName));
             
             #line default
             #line hidden
             this.Write("Entity Include");
             
-            #line 41 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 41 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].ColumnName));
             
             #line default
             #line hidden
             this.Write("(bool flag)\r\n        {\r\n            if (flag && !this.ColumnList.Contains(\"");
             
-            #line 43 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 43 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].ColumnName));
             
             #line default
             #line hidden
             this.Write("\"))\r\n            {\r\n                this.ColumnList.Add(\"");
             
-            #line 45 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 45 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].ColumnName));
             
             #line default
             #line hidden
             this.Write("\");\r\n            }\r\n            return this;\r\n        }\r\n\t\t");
             
-            #line 49 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 49 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
 }
             
             #line default
             #line hidden
             this.Write("    }\r\n\r\n\tpublic partial class ");
             
-            #line 52 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            #line 52 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.TableName));
             
             #line default
@@ -200,7 +207,7 @@ for (int i =0; i < entity.Columns.Count ; i++)
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+        #line 1 "D:\Projects\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
 
 private global::AutoCoding.Model.TableModel _entityField;
 

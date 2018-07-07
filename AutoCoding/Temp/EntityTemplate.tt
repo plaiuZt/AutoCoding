@@ -35,7 +35,7 @@ namespace Git.Storage.Entity.<#=entity.ModuleName #>
 		<#for (int i =0; i < entity.Columns.Count ; i++)
 		{
 		#>
-[DataMapping(ColumnName = "<#=entity.Columns[i].ColumnName #>", DbType = <#=entity.Columns[i].ColumnType #>, Length = <#=entity.Columns[i].CharLength #>, CanNull = <#=entity.Columns[i].IsNullable #>, DefaultValue = <#=entity.Columns[i].DefaultValue #>, PrimaryKey = <#=entity.Columns[i].IsPrimaryKey #>, AutoIncrement = true, IsMap = true)]
+[DataMapping(ColumnName = "<#=entity.Columns[i].ColumnName #>", DbType = <#=entity.Columns[i].ColumnType #>, Length = <#=entity.Columns[i].CharLength #>, CanNull = <#=entity.Columns[i].IsNullable #>, DefaultValue = <#=entity.Columns[i].DefaultValue #>, PrimaryKey = <#=entity.Columns[i].IsPrimaryKey #>, AutoIncrement = <#=entity.Columns[i].IsIdentity #>, IsMap = true)]
         public Int32 <#=entity.Columns[i].ColumnName #> { get; set; }
 
         public <#=entity.TableName #>Entity Include<#=entity.Columns[i].ColumnName #>(bool flag)
