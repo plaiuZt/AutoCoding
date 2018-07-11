@@ -8,25 +8,10 @@ namespace AutoCoding.Model
 {
     public class TableModel
     {
-        public TableModel()
-        {
-            this.Columns = new List<Column>();
-        }
         public string DbName { get; set; }
-
-        public string Schema { get; set; }
-
         public string ModuleName { get; set; }
-
         public string TableName { get; set; }
-
-        public string TableFullName
-        {
-            get { return DbName+"."+(Schema==null?"dbo":Schema)+"."+TableName; }
-        }
-
         public string TableKey { get; set; }
-
         public List<Column> Columns { get; set; }
     }
 
@@ -38,11 +23,6 @@ namespace AutoCoding.Model
         public bool IsNullable { get; set; }
         public string DefaultValue { get; set; }
         public bool IsPrimaryKey { get; set; }
-        public bool IsIdentity { get; set; }
-        public string ColumnID { get; set; }
-        public int Precision { get; set; }
-        public int Scale { get; set; }
-        public string Remark { get; set; }
 
     }
 }
