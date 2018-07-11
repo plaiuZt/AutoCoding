@@ -1,0 +1,32 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="AutoCoding" #>
+<#@ parameter type="AutoCoding.Model.TableModel" name="entity" #>
+/*******************************************************************************
+ * Copyright (C) Git Corporation. All rights reserved.
+ *
+ * Author: 代码工具自动生成
+ * Create Date: <#=DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") #>
+ * Blog: http://www.cnblogs.com/PlaiuZt/ 
+ * Description: Git.Framework
+ * 
+ * Revision History:
+ * Date         Author               Description
+ * <#=DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") #>         PlaiuZt               	
+*********************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using Git.Framework.ORM;
+using Git.Storage.Entity.<#=entity.ModuleName #>;
+using Git.Storage.Entity.Report;
+
+namespace Git.Storage.IDataAccess.<#=entity.ModuleName #>
+{
+    public partial interface I<#=entity.TableName #> : IDbHelper<<#=entity.TableName #>Entity>
+    {
+        
+    }
+}

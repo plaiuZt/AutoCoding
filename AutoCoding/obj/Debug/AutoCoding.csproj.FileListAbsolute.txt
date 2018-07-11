@@ -1,0 +1,15 @@
+E:\Projects\.NetProject\AutoCoding\AutoCoding\bin\Debug\AutoCoding.exe.config
+E:\Projects\.NetProject\AutoCoding\AutoCoding\obj\Debug\AutoCoding.csprojResolveAssemblyReference.cache
+E:\Projects\.NetProject\AutoCoding\AutoCoding\obj\Debug\AutoCoding.Properties.Resources.resources
+E:\Projects\.NetProject\AutoCoding\AutoCoding\obj\Debug\AutoCoding.csproj.GenerateResource.Cache
+E:\Projects\.NetProject\AutoCoding\AutoCoding\bin\Debug\AutoCoding.exe
+E:\Projects\.NetProject\AutoCoding\AutoCoding\bin\Debug\AutoCoding.pdb
+E:\Projects\.NetProject\AutoCoding\AutoCoding\obj\Debug\AutoCoding.exe
+E:\Projects\.NetProject\AutoCoding\AutoCoding\obj\Debug\AutoCoding.pdb
+E:\Projects\.NetProject\AutoCoding\AutoCoding\bin\Debug\Microsoft.VisualStudio.TextTemplating.15.0.dll
+E:\Projects\.NetProject\AutoCoding\AutoCoding\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll
+E:\Projects\.NetProject\AutoCoding\AutoCoding\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.dll
+E:\Projects\.NetProject\AutoCoding\AutoCoding\bin\Debug\Microsoft.VisualStudio.TextTemplating.15.0.xml
+E:\Projects\.NetProject\AutoCoding\AutoCoding\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.xml
+E:\Projects\.NetProject\AutoCoding\AutoCoding\bin\Debug\Microsoft.VisualStudio.TextTemplating.Interfaces.11.0.xml
+E:\Projects\.NetProject\AutoCoding\AutoCoding\obj\Debug\AutoCoding.MainForm.resources
