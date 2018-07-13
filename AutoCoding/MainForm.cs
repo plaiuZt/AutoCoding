@@ -25,6 +25,7 @@ namespace AutoCoding
             tabMain.MouseDoubleClick += TabMain_MouseDoubleClick;
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// 双击关闭事件处理程序
         /// </summary>
@@ -48,6 +49,8 @@ namespace AutoCoding
             }
         }
 
+=======
+>>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
         private void btnConn_Click(object sender, EventArgs e)
         {
             string strConn = tbConnStr.Text.Trim();
@@ -234,7 +237,11 @@ namespace AutoCoding
                     col.CharLength = dr["CharLength"].ToString();
                     col.IsNullable = (bool)dr["IsNullable"];
                     col.IsPrimaryKey = (bool)dr["IsPrimaryKey"];
+<<<<<<< HEAD
                     col.DefaultValue = dr["DefaultValue"]== DBNull.Value?"null": dr["DefaultValue"];
+=======
+                    col.DefaultValue = dr["DefaultValue"].ToString();
+>>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
                     col.IsIdentity = (bool)dr["IsIdentity"];
                     col.ColumnID = dr["ColumnID"].ToString();
                     col.Precision = (int)dr["Precision"];
@@ -280,7 +287,11 @@ namespace AutoCoding
         private void btnScan_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
+<<<<<<< HEAD
             ofd.Filter = "文本文件(*.csproj)|*.csproj|所有文件(*.*)|*.*";
+=======
+            ofd.Filter = "文本文件(*.csproj) | *.csproj | 所有文件(*.*) | *.*";
+>>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
             ofd.Multiselect = false;
             if(ofd.ShowDialog() == DialogResult.OK)
             {
@@ -320,6 +331,7 @@ namespace AutoCoding
                                 cast(colm.precision as int) Precision,
                                 cast(colm.scale as int) Scale,
                                 prop.value Remark,
+<<<<<<< HEAD
                                 scm.text defaultvalue
                                 from JooWMS.sys.columns colm
                                 inner join JooWMS.sys.types systype on colm.system_type_id=systype.system_type_id and colm.user_type_id=systype.user_type_id
@@ -327,6 +339,13 @@ namespace AutoCoding
                                 LEFT JOIN indexCTE ON colm.column_id=indexCTE.column_id AND colm.object_id=indexCTE.object_id
                                 LEFT JOIN JooWMS.sys.syscolumns sc on sc.colid = colm.column_id and sc.id = colm.object_id 
                                 LEFT JOIN JooWMS.sys.syscomments scm on scm.id = sc.cdefault                                      
+=======
+                                '' defaultvalue
+                                from JooWMS.sys.columns colm
+                                inner join JooWMS.sys.types systype on colm.system_type_id=systype.system_type_id and colm.user_type_id=systype.user_type_id
+                                left join JooWMS.sys.extended_properties prop on colm.object_id=prop.major_id and colm.column_id=prop.minor_id
+                                LEFT JOIN indexCTE ON colm.column_id=indexCTE.column_id AND colm.object_id=indexCTE.object_id                                        
+>>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
                                 where colm.object_id=OBJECT_ID('{0}')
                                 order by colm.column_id";
             sqlText = string.Format(sqlText, tableName);
