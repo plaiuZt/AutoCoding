@@ -33,14 +33,11 @@
             this.btnConn = new System.Windows.Forms.Button();
             this.tbConnStr = new System.Windows.Forms.TextBox();
             this.pnBottom = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
             this.tbModule = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnScan = new System.Windows.Forms.Button();
             this.tbProj = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-=======
->>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
             this.btnGen = new System.Windows.Forms.Button();
             this.gbCenter = new System.Windows.Forms.GroupBox();
             this.spContent = new System.Windows.Forms.SplitContainer();
@@ -50,14 +47,6 @@
             this.pnTitle = new System.Windows.Forms.Panel();
             this.cbDb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-=======
-            this.tbProj = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnScan = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbModule = new System.Windows.Forms.TextBox();
->>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
             this.pnTop.SuspendLayout();
             this.pnBottom.SuspendLayout();
             this.gbCenter.SuspendLayout();
@@ -122,7 +111,6 @@
             this.pnBottom.Size = new System.Drawing.Size(1029, 35);
             this.pnBottom.TabIndex = 2;
             // 
-<<<<<<< HEAD
             // tbModule
             // 
             this.tbModule.Location = new System.Drawing.Point(516, 9);
@@ -168,10 +156,6 @@
             // 
             // btnGen
             // 
-=======
-            // btnGen
-            // 
->>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
             this.btnGen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGen.Location = new System.Drawing.Point(948, 7);
             this.btnGen.Name = "btnGen";
@@ -266,52 +250,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "选择数据库";
             // 
-<<<<<<< HEAD
-=======
-            // tbProj
-            // 
-            this.tbProj.Location = new System.Drawing.Point(96, 9);
-            this.tbProj.Name = "tbProj";
-            this.tbProj.Size = new System.Drawing.Size(299, 21);
-            this.tbProj.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 12);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "选择生成目录";
-            // 
-            // btnScan
-            // 
-            this.btnScan.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnScan.Location = new System.Drawing.Point(398, 8);
-            this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(40, 23);
-            this.btnScan.TabIndex = 6;
-            this.btnScan.Text = "浏览";
-            this.btnScan.UseVisualStyleBackColor = true;
-            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(454, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "生成模块";
-            // 
-            // tbModule
-            // 
-            this.tbModule.Location = new System.Drawing.Point(516, 9);
-            this.tbModule.Name = "tbModule";
-            this.tbModule.Size = new System.Drawing.Size(119, 21);
-            this.tbModule.TabIndex = 8;
-            // 
->>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);

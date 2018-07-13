@@ -25,7 +25,6 @@ namespace AutoCoding
             tabMain.MouseDoubleClick += TabMain_MouseDoubleClick;
         }
 
-<<<<<<< HEAD
         /// <summary>
         /// 双击关闭事件处理程序
         /// </summary>
@@ -49,18 +48,16 @@ namespace AutoCoding
             }
         }
 
-=======
->>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
         private void btnConn_Click(object sender, EventArgs e)
         {
             string strConn = tbConnStr.Text.Trim();
-            if(!string.IsNullOrEmpty(strConn))
+            if (!string.IsNullOrEmpty(strConn))
             {
                 Conn = new SqlConnection(strConn);
                 try
                 {
                     Conn.Open();
-                    if(Conn.State == ConnectionState.Open)
+                    if (Conn.State == ConnectionState.Open)
                     {
                         tbConnStr.Enabled = false;
                         SqlCommand cmd = new SqlCommand();
@@ -86,7 +83,7 @@ namespace AutoCoding
             {
                 MessageBox.Show("请输入数据库连接字符串！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+
         }
 
         private void cbDb_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,7 +91,7 @@ namespace AutoCoding
             string strDbName = cbDb.SelectedText;
             try
             {
-                if(Conn == null)
+                if (Conn == null)
                 {
                     string strConn = tbConnStr.Text.Trim();
                     Conn = new SqlConnection(strConn);
@@ -107,7 +104,7 @@ namespace AutoCoding
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = Conn;
-                    cmd.CommandText = @"select name from "+ strDbName + "..sysObjects where xtype = 'U' order by name";
+                    cmd.CommandText = @"select name from " + strDbName + "..sysObjects where xtype = 'U' order by name";
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
@@ -132,7 +129,7 @@ namespace AutoCoding
             if (!e.Item.Checked)
             {
                 //如果存在tabpage,则取消
-                if(tabMain.TabPages.ContainsKey(e.Item.Text))
+                if (tabMain.TabPages.ContainsKey(e.Item.Text))
                 {
                     this.tabMain.TabPages[e.Item.Text].Dispose();
                 }
@@ -237,20 +234,16 @@ namespace AutoCoding
                     col.CharLength = dr["CharLength"].ToString();
                     col.IsNullable = (bool)dr["IsNullable"];
                     col.IsPrimaryKey = (bool)dr["IsPrimaryKey"];
-<<<<<<< HEAD
-                    col.DefaultValue = dr["DefaultValue"]== DBNull.Value?"null": dr["DefaultValue"];
-=======
-                    col.DefaultValue = dr["DefaultValue"].ToString();
->>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
+                    col.DefaultValue = dr["DefaultValue"] == DBNull.Value ? "null" : dr["DefaultValue"];
                     col.IsIdentity = (bool)dr["IsIdentity"];
                     col.ColumnID = dr["ColumnID"].ToString();
                     col.Precision = (int)dr["Precision"];
                     col.Scale = (int)dr["Scale"];
                     col.Remark = dr["Remark"].ToString();
 
-                    if(col.IsPrimaryKey)
+                    if (col.IsPrimaryKey)
                     {
-                        model.TableKey += col.ColumnName+",";
+                        model.TableKey += col.ColumnName + ",";
                     }
                     model.Columns.Add(col);
                 }
@@ -263,17 +256,17 @@ namespace AutoCoding
                 temp.Initialize(); // Must call this to transfer values.  
                 string text = temp.TransformText();
 
-                if(!string.IsNullOrEmpty(model.ModuleName))
+                if (!string.IsNullOrEmpty(model.ModuleName))
                 {
                     //创建目录
-                    if(dir.GetDirectories().Where(a=>a.Name == model.ModuleName).Count() == 0)
+                    if (dir.GetDirectories().Where(a => a.Name == model.ModuleName).Count() == 0)
                     {
                         DirectoryInfo subDir = dir.CreateSubdirectory(model.ModuleName);
-                        File.WriteAllText(subDir.FullName+"/"+model.TableName + "Entity.cs", text, Encoding.UTF8);
+                        File.WriteAllText(subDir.FullName + "/" + model.TableName + "Entity.cs", text, Encoding.UTF8);
                     }
                     else
                     {
-                        File.WriteAllText(dir.FullName + "/" +model.ModuleName+"/"+ model.TableName + "Entity.cs", text, Encoding.UTF8);
+                        File.WriteAllText(dir.FullName + "/" + model.ModuleName + "/" + model.TableName + "Entity.cs", text, Encoding.UTF8);
                     }
                 }
                 else
@@ -281,19 +274,15 @@ namespace AutoCoding
                     File.WriteAllText(dir.FullName + "/" + model.TableName + "Entity.cs", text, Encoding.UTF8);
                 }
             }
-            
+
         }
 
         private void btnScan_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-<<<<<<< HEAD
             ofd.Filter = "文本文件(*.csproj)|*.csproj|所有文件(*.*)|*.*";
-=======
-            ofd.Filter = "文本文件(*.csproj) | *.csproj | 所有文件(*.*) | *.*";
->>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
             ofd.Multiselect = false;
-            if(ofd.ShowDialog() == DialogResult.OK)
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
                 this.tbProj.Text = ofd.FileName;
             }
@@ -331,7 +320,6 @@ namespace AutoCoding
                                 cast(colm.precision as int) Precision,
                                 cast(colm.scale as int) Scale,
                                 prop.value Remark,
-<<<<<<< HEAD
                                 scm.text defaultvalue
                                 from JooWMS.sys.columns colm
                                 inner join JooWMS.sys.types systype on colm.system_type_id=systype.system_type_id and colm.user_type_id=systype.user_type_id
@@ -339,13 +327,6 @@ namespace AutoCoding
                                 LEFT JOIN indexCTE ON colm.column_id=indexCTE.column_id AND colm.object_id=indexCTE.object_id
                                 LEFT JOIN JooWMS.sys.syscolumns sc on sc.colid = colm.column_id and sc.id = colm.object_id 
                                 LEFT JOIN JooWMS.sys.syscomments scm on scm.id = sc.cdefault                                      
-=======
-                                '' defaultvalue
-                                from JooWMS.sys.columns colm
-                                inner join JooWMS.sys.types systype on colm.system_type_id=systype.system_type_id and colm.user_type_id=systype.user_type_id
-                                left join JooWMS.sys.extended_properties prop on colm.object_id=prop.major_id and colm.column_id=prop.minor_id
-                                LEFT JOIN indexCTE ON colm.column_id=indexCTE.column_id AND colm.object_id=indexCTE.object_id                                        
->>>>>>> d91443cdd1257c8f133790f05d4365e0ae37ea40
                                 where colm.object_id=OBJECT_ID('{0}')
                                 order by colm.column_id";
             sqlText = string.Format(sqlText, tableName);
