@@ -34,8 +34,8 @@ namespace AutoCoding.Temp
             
             #line default
             #line hidden
-            this.Write("\r\n * Blog: http://www.cnblogs.com/qingyuan/ \r\n * Description: Git.Framework\r\n * \r" +
-                    "\n * Revision History:\r\n * Date         Author               Description\r\n * ");
+            this.Write("\r\n * Blog:  \r\n * Description: Git.Framework\r\n * \r\n * Revision History:\r\n * Date  " +
+                    "       Author               Description\r\n * ");
             
             #line 15 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")));
@@ -110,7 +110,7 @@ for (int i =0; i < entity.Columns.Count ; i++)
             
             #line default
             #line hidden
-            this.Write("\", DbType = ");
+            this.Write("\", DbType = DbType.");
             
             #line 38 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].ColumnType));
@@ -145,7 +145,21 @@ for (int i =0; i < entity.Columns.Count ; i++)
             
             #line default
             #line hidden
-            this.Write(", AutoIncrement = true, IsMap = true)]\r\n        public Int32 ");
+            this.Write(", AutoIncrement = ");
+            
+            #line 38 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].IsIdentity));
+            
+            #line default
+            #line hidden
+            this.Write(", IsMap = true)]\r\n        public ");
+            
+            #line 39 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(entity.FieldType));
+            
+            #line default
+            #line hidden
+            this.Write(" ");
             
             #line 39 "E:\Projects\.NetProject\AutoCoding\AutoCoding\Temp\EntityTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Columns[i].ColumnName));

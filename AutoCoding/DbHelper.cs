@@ -326,6 +326,49 @@ namespace AutoCoding
             }
             return commonType;
         }
+
+        public static string MapDbType(string dbtype)
+        {
+            if (string.IsNullOrEmpty(dbtype)) return dbtype;
+            dbtype = dbtype.ToLower();
+            string retType = "Object";
+            switch (dbtype)
+            {
+                case "bigint": retType = "Int64"; break;
+                case "binary": retType = "Binary"; break;
+                case "bit": retType = "Boolean"; break;
+                case "char": retType = "AnsiStringFixedLength"; break;
+                case "date": retType = "DateTime"; break;
+                case "datetime": retType = "DateTime"; break;
+                case "datetime2": retType = "DateTime2"; break;
+                case "datetimeoffset": retType = "DateTimeOffset"; break;
+                case "decimal": retType = "Decimal"; break;
+                case "float": retType = "Double"; break;
+                case "image": retType = "Binary"; break;
+                case "int": retType = "Int32"; break;
+                case "money": retType = "Currency"; break;
+                case "nchar": retType = "StringFixedLength"; break;
+                case "ntext": retType = "String"; break;
+                case "numeric": retType = "Decimal"; break;
+                case "nvarchar": retType = "String"; break;
+                case "real": retType = "Single"; break;
+                case "smalldatetime": retType = "DateTime"; break;
+                case "smallint": retType = "Int16"; break;
+                case "smallmoney": retType = "Currency"; break;
+                case "sql_variant": retType = "Object"; break;
+                case "sysname": retType = "Object"; break;
+                case "text": retType = "String"; break;
+                case "time": retType = "Time"; break;
+                case "timestamp": retType = "Binary"; break;
+                case "tinyint": retType = "Byte"; break;
+                case "uniqueidentifier": retType = "Guid"; break;
+                case "varbinary": retType = "Binary"; break;
+                case "varchar": retType = "String"; break;
+                case "xml": retType = "Xml"; break;
+                default: retType = "Object"; break;
+            }
+            return retType;
+        }
     }
     #endregion
 }
